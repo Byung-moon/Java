@@ -4,5 +4,5 @@
 
 - I referred to the book 'I've never really studied JAVA'
 
-This is the link of that book.
+ - This is the link of that book.
 [http://www.yes24.com/Product/Goods/3497762]
