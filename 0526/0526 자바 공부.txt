@@ -1,0 +1,87 @@
+0526 자바 공부
+
+패키지 : 클래스 파일이 저장되어 있는 디렉터리 정보를 표시해서 인스턴스를 생성하기 위해 등장한 것.
+
+EX)
+
+orange.area.Circle c1 = new orange.area.Cirlcle(); // 넓이를 구하는 Circle class
+orange.parameter.Circle c2 = new orange.perimeter.Circle();  // 둘레를 구하는 Circle class
+
+-> orange 디렉토리 안에 area, parameter 디렉토리가 있음.
+
+-> orange를 패키지라고 함. area, parameter를 서브 패키지라고 함.
+
+-> 패키지는 단순히 디렉토리를 나눈다고 해서 되는 것이 아니라 소스파일에도 별도로 표시해 주어야함.
+
+---------------  패키지와 클래스 패스의 관계  --------------------
+
+/C드라이브/AAA/BBB/Circla.class
+/C드라이브/AAA/CCC/Circle.class 
+
+로 디렉터리가 되어있을때 
+
+BBB.Circle c1 = new BBB.Circle();
+CCC.Circle c2 = new CCC.Circle();
+
+로 선언하고 싶을때는 AAA디렉토리가 클래스패스에 포함되어야 한다.
+
+AAA.BBB.Circle c1 = new AAA.BBB.Circle();
+AAA.CCC.Circle c2 = new AAA.CCC.Circle();
+
+로 선언하고 싶을때는 C드라이브가 클래스패스에 포함되어야 한다.
+
+----------------  패키지의 선언  -----------------------------------
+
+이 클래스는 orange.area 패키지에 묶겠다! 
+
+-> package orange.area; // orange.area 패키지 선언. 즉 class파일 안에 선언해주면 됨.
+
+* 서로다른 AAA, BBB의 클래스를 orange.best의 선언으로 한 패키지에 묶으려면 AAA, BBB의 클래스가 /orange/best 디렉토리 안에 들어가 있어야함.
+
+
+------------------------ import 선언  ------------------------------
+
+import orange.area.Circle;
+
+-> "orange.area 패키지의 Circle을 의미할 때에는 다 생략하고 Circle만 표시하겠다"
+
+Circle c3 = new Circle(2.5); 를 하면 Circle은 area의 Circle을 의미.
+
+
+------------------------ *을 이용한 import ---------------------------
+
+orange.area 패키지로 묶여있는 Circle과 Triangle 클래스의 인스턴스를 생성할때
+
+orange.area.Circle cl = new orange.area.Circle(10);	//Circle 인스턴스 생성
+orange.area.Triangle tri = new orange.area.Triangle(1,4,5);	// Triangle 인스턴스 생성, 세 개의 정수를 인자로 받는다 가정
+
+import orange.area.Circle;
+import orange.area.Triangle;
+
+을 선언하면
+
+Circle cl = new Circle(10);
+Circle tri = new Triangle(1,4,5); 로 선언이 가능하다.
+
+-> area 패키지에 속한 클래스들이 많을때는
+
+import oreange.area.*; 
+
+로 한 번에 선언이 가능함. -> but 잘못된 클래스를 선언할 확률이 존재.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
