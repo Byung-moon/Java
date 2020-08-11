@@ -1,6 +1,6 @@
 # Java
 
-### These are the program code I wrote while studying JAVA language personally.
+### These are the program codes I wrote while studying JAVA language personally.
 
 - I referred to the book 'I've never really studied JAVA'
 
